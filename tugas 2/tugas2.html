@@ -1,0 +1,80 @@
+<html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Tugas 2 - Biodata Mahasiswa</title>
+    <style>
+        body {
+            background-color: #FFF9D6;
+        }
+
+        .kartu-ktp {
+            width: 550px;
+            border: 2px solid #D8A2A2;
+            padding: 25px 30px;
+            margin: 50px auto;
+            font-family: Arial, sans-serif;
+            background-color: #FFDCDC;
+            border-radius: 10px;
+        }
+
+        .judul {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .isi-kartu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .data-diri p {
+            margin: 6px 0;
+        }
+
+        .foto img {
+            width: 150px;
+            height: 190px;
+            object-fit: cover;
+            border: 1px solid #D8A2A2;
+            display: block;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+
+   <div class="kartu-ktp">
+        <marquee behavior="slide" direction="down">
+        <div class="judul">Biodata Mahasiswa</div>  
+    </marquee>
+
+        <div class="isi-kartu">
+
+            <div class="data-diri">
+                <marquee behavior="slide" direction="up">
+                <p><strong>Nama:</strong> Kisi Maharani Mustika Putri</p>
+                <p><strong>NPM:</strong> 2513020038</p>
+                <p><strong>Alamat:</strong> Kediri, Jawa Timur</p>
+                <p><strong>TTL:</strong> Kediri, 30 April 2006</p>
+                <p><strong>Deskripsi Singkat Pribadi:</strong></p>
+                <p>Saya mahasiswa SI di semester 3. Xie Xie.</p>
+                </marquee>
+            </div>
+
+            <div class="foto">
+                <marquee behavior="slide" direction="up">
+                <img src="foto.jpg.jpeg" alt="Foto">
+            </marquee>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
