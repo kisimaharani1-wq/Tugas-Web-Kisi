@@ -1,53 +1,251 @@
-/* membuat body berwarna abu-abu dan font arial dan sans serif ukuran 16px */
+/* ===== Palet warna tema Valko / Love and Deepspace =====
+   malam ungu gelap : #1e1a2b (latar halaman)
+   ungu tua         : #2a2238 (header, footer)
+   merah keabuan    : #a63d40 (rambut Valko)
+   merah tua        : #7d2a33 (judul poin, teks link)
+   emas             : #d4a94a (mata Valko)
+   putih hangat     : #fdfbfa (kertas artikel)
+*/
+
+/* Reset CSS dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body: latar malam, font arial sans-serif ukuran 16px */
 body {
-    background-color: #f0f0f0;
+    background-color: #1e1a2b;
     font-family: Arial, sans-serif;
     font-size: 16px;
+    color: #2b2633;
 }
 
-/* membuat canvas putih di tengah */
+/* canvas putih di tengah */
 .container {
-    background-color: white;
-    margin: 0 auto;
-    padding: 20px;
-    width: 800px;
+    background-color: #fdfbfa;
+    margin: 30px auto;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
-/* mengatur jarak dalam header */
+/* header gelap */
 .header {
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
+    background-color: #2a2238;
+    padding: 20px 20px 10px 20px;
+    border-bottom: 3px solid #d4a94a;
 }
 
-/* mengatur judul */
+/* judul */
 .header .judul {
-    font-size: 40px;
+    font-size: 38px;
     font-weight: bold;
     margin-bottom: 5px;
+    color: #f3ead8;
 }
 
-/* untuk menavigasi atau menu atas */
-
+/* menu navigasi atas */
 .nav {
-    padding: 0px;
+    padding: 0;
+    list-style: none;
 }
 
 .nav li {
-    /* membuat list navigasi menjadi horizontal dan mengataur jarak antar menu */
+    /* menu horizontal dengan jarak antar menu */
     display: inline-block;
     margin-right: 10px;
-    margin-top: 20px
+    margin-top: 20px;
 }
 
-/* mengatur link navigasi */
+/* link navigasi */
 .nav li a {
     text-decoration: none;
-    color: navy;
+    color: #e6dcc8;
+    font-weight: bold;
+    padding: 6px 10px;
+    display: inline-block;
+    border-radius: 3px;
 }
 
-/* membuat animasi saat link di sorot */
+/* efek saat link disorot */
 .nav li a:hover {
-    background-color: orange;
-    color: white;
+    background-color: #d4a94a;
+    color: #1e1a2b;
+}
+
+/* garis fokus untuk pengguna keyboard */
+a:focus-visible {
+    outline: 2px solid #d4a94a;
+    outline-offset: 2px;
+}
+
+/* area banner gambar */
+.banner .img-banner {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* area konten / artikel utama */
+.main {
+    padding: 25px 20px;
+}
+
+.post-title {
+    font-size: 24px;
+    color: #2a2238;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.penulis {
+    font-size: 13px;
+    color: #7a7285;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e6dfe6;
+    padding-bottom: 10px;
+}
+
+.lead {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #443d4d;
+}
+
+/* gambar dalam artikel */
+.box-img-konten {
+    margin: 15px 0 25px 0;
+}
+
+.img-konten {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+/* keterangan / kredit gambar */
+.img-caption {
+    font-size: 13px;
+    color: #7a7285;
+    text-align: center;
+    margin-top: 6px;
+}
+
+/* daftar poin kontroversi */
+.controversy-list {
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.controversy-list li {
+    margin-bottom: 18px;
+    line-height: 1.6;
+}
+
+.controversy-list li::marker {
+    color: #a63d40;
+    font-weight: bold;
+}
+
+.controversy-list h3 {
+    font-size: 17px;
+    color: #7d2a33;
+    margin-bottom: 5px;
+}
+
+.controversy-list p {
+    color: #4f4858;
+}
+
+.controversy-list p + p {
+    margin-top: 8px;
+}
+
+/* box kesimpulan */
+.conclusion-box {
+    background-color: #f6eff1;
+    border-left: 4px solid #a63d40;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.conclusion-box h3 {
+    font-size: 16px;
+    color: #7d2a33;
+    margin-bottom: 5px;
+}
+
+.conclusion-box p {
+    line-height: 1.5;
+    color: #443d4d;
+}
+
+/* ajakan komentar */
+.call-to-action {
+    background-color: #fbf3dc;
+    border: 1px dashed #d4a94a;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+    color: #7a5a12;
+}
+
+/* daftar sumber */
+.sumber {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #e6dfe6;
+    font-size: 14px;
+}
+
+.sumber h3 {
+    font-size: 16px;
+    color: #2a2238;
+    margin-bottom: 8px;
+}
+
+.sumber ul {
+    padding-left: 20px;
+}
+
+.sumber li {
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.sumber a {
+    color: #7d2a33;
+}
+
+.sumber a:hover {
+    color: #a63d40;
+    text-decoration: none;
+}
+
+/* footer */
+.footer {
+    background-color: #2a2238;
+    color: #d9d0e0;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    border-top: 3px solid #d4a94a;
+}
+
+/* tampilan HP */
+@media (max-width: 600px) {
+    .container {
+        margin: 0 auto;
+    }
+
+    .header .judul {
+        font-size: 26px;
+    }
+
+    .post-title {
+        font-size: 21px;
+    }
 }
