@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 7 JavaScript</title>
+</head>
+<body>
+    <h1>Tugas 7 JavaScript</h1>
+
+    <script type="text/javascript">
+        // membuat Object
+        var obj = {
+            penulis : "Rudy Eko Prasetya",
+            buku : [
+                "Modul Pemrograman Dasar",
+                "Modul Pemrograman Mobile"
+            ],
+            hal : 109,
+            isTerbit : true
+        }
+
+        console.log(obj);
+
+        //membuat object dengan constructor
+        function orang(nama,gender,umur,alamat) {
+            this.nama = nama;
+            this.gender = gender;
+            this.umur = umur;
+            this.alamat = alamat;
+        }
+
+        //membuat instance object
+        var Dewasa = new orang("Rudy", "L", 30,['jalan kyai mansur', 'doko sragi', 'kab kediri']) ;
+
+        console.log(Dewasa);
+    </script>
+</body>
+</html>
